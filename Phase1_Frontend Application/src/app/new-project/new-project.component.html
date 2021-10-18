@@ -1,0 +1,86 @@
+<!-- <p>new-project works!</p> -->
+<!--All the HTML template is present in the index.html so avoid the Doctype Html etc.., 
+    the current html will routed into <body> of index.html so just write the body part
+    You may add any library links in the top enclosing them in <head></head> tag -->
+
+
+
+    <head>
+        <!-- <title>New Project Registration</title> -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      </head>
+    
+    
+        <div class="testbox">
+          <form action="/" [formGroup]="projectForm" ngSubmit="onSubmit()">
+                <div class="banner">
+                    <h1>New Project</h1>
+                </div>
+    
+                <p>Project Information</p>
+    
+                <!-- <div class="item">
+                    <label for="Title">Project Title<span>*</span></label>
+                    <input id="Title" type="Title" name="Title" fromControlName="projectTitle"/>
+                </div> -->
+                
+                <div class="item">
+                    <label for="Title">Title<span>*</span></label>
+                    <input id="Title" type="Title" name="Title" formControlName="projectTitle"/>
+                </div>
+    
+                <div class="item">
+                    <label for="domain">Domain<span></span></label>
+                    <input id="domain" type="domain" name="domain" formControlName="projectDomain"/>
+                </div>
+    
+                <div class="item">
+                    <label for="tech">Technologies Used<span></span></label>
+                    <input id="tech" type="text" name="tech" formControlName="projectTechTools"/>
+                </div>
+    
+                <div class="item">
+                <label for="Description">Project Description<span>*</span></label>
+                <textarea rows="3" id="Description" type="Description" name="Description" formControlName="projectDescription"></textarea>
+                <!-- <input id="Description" type="Description" name="Description" required/> -->
+                </div>
+            
+                <div class="item">
+                <label for="contact info">Contact info<span>*</span></label>
+                <input id="contact info" type="text" name="enter email" formControlName="projectContactInfo"/>
+                </div>
+    
+                <!-- <div class="item">
+                    <p>Choose role</p>
+                    <select formControlName="projectRole">
+                    <option selected value="" disabled selected></option>
+                   
+                    <option value="Maintainer" >Maintainer</option
+                    <option value="Developer">Developer</option>
+                    <option value="Admin">Admin</option>
+                    </select>
+                </div> -->
+
+                <div class="item">
+                    <label>Choose your project type based your the current project Phase </label>
+                    <!-- <p>Choose your project type based your the current project Phase</p> -->
+                    <select formControlName="projectType">
+                    <option selected value="" disabled selected></option>
+                    <!-- <option value="course-type" >Maintainer</option>
+                    <option value="short-courses">Developer</option>
+                    <option value="featured-courses">Admin</option> -->
+                    <option value="Ideation/EarlyPrototype" >Ideation/EarlyPrototype</option>
+                    <option value="Sandbox" >Sandbox </option>
+                    <option value="Incubated">Incubated</option>
+                    <option value="Graduated">Graduated</option>
+                    </select>
+                </div>
+    
+                <div class="btn-block">
+                    <button type="create new project" (click)="onSubmit()" [disabled]="!projectForm.valid">create new project</button>
+                </div>
+          </form>
+        </div>
+    
+    

@@ -1,0 +1,53 @@
+<!-- <p>sign-up works!</p> -->
+
+<!-- <head>
+    
+    <title>SignUp form</title>
+    <link rel ="stylesheet" href = "sign-up.component.css"/>
+</head> -->
+
+<section>       
+    <div class="Img">
+        <img src="https://images.pexels.com/photos/6177572/pexels-photo-6177572.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+    </div>
+    <div class="content">
+        <div class="form">
+         <h2>Sign Up</h2>
+         <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div class="inputX">
+                <span>Username</span>
+                <input type="text" name="" formControlName="username">
+            </div>
+            
+
+            <div class="inputX">
+                <span>Email address</span>
+                <input type="text" name="" formControlName="email">
+            </div>
+
+
+            
+            <div class="inputX">
+                <span>Enter Password</span>
+                <input type="password" name="" formControlName="password">
+            </div>
+
+            
+            <div class="inputX">
+                <span>Confirm Password</span>
+                <input type="password" name="" formControlName="confirmpassword">
+            </div> <br> <br>
+           
+            <button type="submit">
+                Signin
+            </button>
+
+            <div class="inputX">
+                <p>Already an user? <a href="#">Login</a></p>
+               
+            </div>
+         </form>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,99 @@
+<!-- <p>project-dashboard works!</p> -->
+<!--All the HTML template is present in the index.html so avoid the Doctype Html etc.., 
+    the current html will routed into <body> of index.html so just write the body part
+    You may add any library links in the top enclosing them in <head></head> tag -->
+
+
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+    
+<nav class="navbar">
+  <!-- LOGO -->
+  <div class="logo">OSC</div>
+  <!-- NAVIGATION MENU -->
+  <ul class="nav-links">
+    <!-- USING CHECKBOX HACK -->
+    <input type="checkbox" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="pd">&#9776;</label>
+    <!-- NAVIGATION MENUS -->
+    <div class="menu">
+      <li><a href="/">Home</a></li>
+      
+      <li class="Models">
+        <a href="/">Services</a>
+        <!-- DROPDOWN MENU -->
+        <ul class="dropdown">
+          <li><a href="/">Dropdown 1 </a></li>
+          <li><a href="/">Dropdown 2</a></li>
+          
+        </ul>
+      </li>
+      
+      <li><a href="/">Auth</a></li>
+    </div>
+  </ul>
+</nav>
+
+  <form action="">
+  <div class="form-group"></div>
+    <input id = 'searchbar1' class='form-control' type="search" placeholder="Search here ..." (keyup.enter)="getProjectsSearch()">
+    <i class="fa fa-search"></i>
+  </form>
+
+  <!-- <div class="wrap"> -->
+    <!-- <div class="search"> -->
+        <!-- <input type="text" class="searchTerm" placeholder="What are you looking for?"> -->
+        <!-- <button type="submit" class="searchButton"> -->
+          <!-- <i class="fa fa-search"></i> -->
+      <!-- </button> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+
+    <button (click)="goToNewProjectPage()">
+      <!-- <button (click)="getProjectsList()"> -->
+      <!-- <a [routerLink]="['newProject']">Add a new project</a>  -->
+      Add a new project
+    </button>
+    <!-- <div>
+      <p>This is APIProjectsList</p>
+    </div> -->
+    
+  <!-- <link rel="stylesheet" href="table.css" /> -->
+  
+    <div class="table-wrapper">
+    <table class="fl-table">
+      <!-- <div>
+        <table> -->
+        <thead>
+        <tr>
+          <th>Project Title</th>
+          <th>Description</th>
+          <th>Domain</th>
+          <th>Technologies & Tools</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor ="let project of APIProjects">
+      <!-- <tr *ngFor ="let project of ProjectResults"> -->
+        <!-- <tr *ngFor ="let project of allProjects"> -->
+          <td>{{project.projectTitle| notAvailable}}</td>
+          <td>{{project.description| notAvailable}}</td>
+          <td>{{project.domain| notAvailable}}</td>
+          <!-- <td>Not Available Currently</td> -->
+          <td>{{project.techTools | notAvailable }}</td>
+          <td>{{project.contactMail| notAvailable}}</td>
+      </tr>
+      
+      
+      <tbody>
+  </table>
+</div>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+

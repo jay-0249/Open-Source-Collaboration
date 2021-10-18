@@ -1,0 +1,114 @@
+body,html{
+    height: 100%;
+    margin: 0 auto;
+  }
+  body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  header,footer{
+    position: fixed;
+    background-color: skyblue;
+    width: 100%;
+    color: black;
+  }
+  header{
+    height: 10vh;
+  }
+  header h2{
+    position: absolute;
+    margin-top: 15px;
+    left: 45%;
+  }
+  /* header h5{
+    padding-left: 20%;
+    margin-top: 20px;
+  } */
+  footer{
+    height: 8vh;
+    bottom: 0;
+  }
+  main{
+    position: fixed;
+    background-color: rgb(219, 238, 245);
+    width: 100%;
+    margin-top: 10vh;
+    margin-bottom: 8vh;
+    height: 100%;
+  }
+  .Logo{
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+    margin-top: 6px;
+    margin-left: 10px;
+  }
+  .tb{
+    padding-left: 6%;
+    margin-top: -35px;
+  }
+  
+  /* p{
+      margin-left: 25%;
+    padding: 0px;
+  } */
+  .userdp{
+    margin: 30px 30px;
+    height: 75px;
+    border-radius: 50%;
+  }
+  .userprofile{
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 12%;
+    margin-top: -100px;
+  }
+  .editprofile{
+      border-radius: 8px;
+  }
+  ul{
+    list-style-type: none;
+    width: 100%;
+    margin-top: 40px;
+    padding-bottom: 0px;
+    overflow: hidden;
+    border: black;
+   background-color: rgb(164, 223, 245);
+  }
+  .btn:hover,.btn:active{
+    background-color: cadetblue;
+  }
+  li{
+    float: left;
+    padding-left: 15%;
+    padding-top: 10px;
+    text-align: center;
+    margin-top: 1px;
+  }
+  .btn{
+      background: transparent;
+      background-color: rgb(164, 223, 245);
+      border-style: none;
+      cursor: pointer;
+  }
+  .profile{
+      margin: 5%;
+  }
+  table.project{
+      width: 90%;
+      border-collapse: collapse;
+  }
+  table.project,td.project,th.project{
+    border: 1px solid black;
+    margin: 5%;
+    text-align: center;
+  }  
+  table.contact{
+      margin: 5%; 
+  }
+td.contact{
+      padding: 10px
+  }
+  
+
+    
+    

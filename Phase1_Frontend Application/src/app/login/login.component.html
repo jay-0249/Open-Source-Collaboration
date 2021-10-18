@@ -1,0 +1,107 @@
+<!-- <p>login works!</p> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <head>
+          <title>Login</title>
+          <link rel="stylesheet" href ="login.component.css"/>
+        </head> -->
+  <!-- <div id="form_wrapper"> -->
+      <!-- <div id="form_left">
+        <img src="https://ashoktailors.com/tms/backend/img/admin-login.jpg" alt="computer icon" />
+      </div>
+      <div id="form_right">
+        <h1>Member Login</h1>
+        <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="input_container">
+              <i class="fas fa-envelope"></i>
+              <input
+                placeholder="Email"
+                type="email"
+                name="Email"
+                id="field_email"
+                class="input_field"
+                formControlName="email"
+              />
+            </div>
+            <div class="input_container">
+              <i class="fas fa-lock"></i>
+              <input
+                placeholder="Password"
+                type="password"
+                name="Password"
+                id="field_password"
+                class="input_field"
+                formControlName="password"
+              />
+            </div>
+
+      
+            <input
+            type="submit"
+            value="Login"
+            id="input_submit"
+            class="input_field"
+          />
+      </form>
+        <span>Forgot <a href="#"> Username / Password ?</a></span>
+        <span id="create_account">
+          <a href="#">Create your account ➡ </a>
+        </span>
+      </div>
+    </div> -->
+    
+
+
+<!-- <body> -->
+    
+<!-- </body> -->
+<!-- </html> -->
+
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    
+    <title>Login form</title>
+    <link rel ="stylesheet" href = "login.component.scss"/>
+    </head>
+  <section>       
+    <div class="Img">
+        <img src="https://images.pexels.com/photos/699459/pexels-photo-699459.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+    </div>
+    <div class="content">
+        <div class="form">
+          <h2>Login</h2>
+          <form  [formGroup]="loginForm"  (ngSubmit)="onSubmit()">
+            <div class="inputX">
+                <span>Username</span>
+                <input type="text" name="" formControlName="email">
+            </div>
+            
+    
+            <div class="inputX">
+                <span>Password</span>
+                <input type="password" name="" formControlName="password">
+            </div>
+    
+            <br>
+            <br>
+            
+    
+            
+            <button type="submit"  value="">
+                Signin
+            </button>
+    
+            <div class="inputX">
+                <p>Don't have an account? <a href="#">SignUp</a></p>
+                
+            </div>
+          </form>
+        </div>
+    </div>
+    
+    </section>
