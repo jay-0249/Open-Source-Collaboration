@@ -18,10 +18,12 @@ namespace Phase1_Projects_Backend.Controllers
     public class ProjectsController : ControllerBase
     {
         private readonly IProjectService _service;
+        private readonly ProjectDbContext _context;
 
-        public ProjectsController(IProjectService service1)
+        public ProjectsController(IProjectService service1, ProjectDbContext context)
         {
             _service = service1;
+            _context = context;
         }
 
 
@@ -75,6 +77,19 @@ namespace Phase1_Projects_Backend.Controllers
             //    return StatusCode(500, "There is some internal server error");
             //}
 
+        }
+
+
+        [EnableCors("withHeaderPolicy")]
+        [HttpPost]
+        //[Route("AddUser")]
+        public async Task<ActionResult<User>> PostUser(User user)
+        {
+            _context.UserList.Add(user);
+            await _context.SaveChangesAsync();
+
+            //return CreatedAtAction("GetUser", new { id = user.UserId }, user);
+            return Ok(user);
         }
     }
 }

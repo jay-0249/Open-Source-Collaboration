@@ -40,6 +40,7 @@ export class UserService {
     // perform the appropriate API call here that will add a project to the server
     //https://localhost:44368/api/Users/SignUp
     let signUpURL:string = this.userServiceURL+'/SignUp';
+    //let signUpURL:string = "https://localhost:44368/api/Projects";
     return this.httpClient.post<User>(signUpURL,user);
   } 
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ namespace Phase1_Projects_Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[EnableCors("withHeaderPolicy")]
     public class UsersController : ControllerBase
     {
         private readonly ProjectDbContext _context;
@@ -21,13 +23,16 @@ namespace Phase1_Projects_Backend.Controllers
         }
 
         // GET: api/Users
+        [EnableCors("withHeaderPolicy")]
         [HttpGet]
+
         public async Task<ActionResult<IEnumerable<User>>> GetUserList()
         {
             return await _context.UserList.ToListAsync();
         }
 
         // GET: api/Users/5
+        [EnableCors("withHeaderPolicy")]
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
@@ -43,6 +48,7 @@ namespace Phase1_Projects_Backend.Controllers
 
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [EnableCors("withHeaderPolicy")]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
@@ -74,6 +80,7 @@ namespace Phase1_Projects_Backend.Controllers
 
         // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [EnableCors("withHeaderPolicy")]
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
@@ -84,6 +91,7 @@ namespace Phase1_Projects_Backend.Controllers
         }
 
         // DELETE: api/Users/5
+        [EnableCors("withHeaderPolicy")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {

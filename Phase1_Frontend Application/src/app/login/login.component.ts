@@ -53,12 +53,14 @@ export class LoginComponent implements OnInit  {
     else if(this.loginResult==this.loginPasswordWrong){
       const flag = this._userService.SetUserToInActive();
       console.log("User set to InActive and the IsActive status is "+flag);
-      this.loginErrorString="Incorrect Password";
+      //this.loginErrorString="Incorrect Password";
+      this.loginErrorString="You have entered a wrong Username or Password. Please try again with correct credentials";
     }
     else if(this.loginResult== this.loginUsernameNotFound){
       const flag = this._userService.SetUserToInActive();
       console.log("username is not found and the IsActive status is "+flag);
-      this.loginErrorString="Please enter a valid username";
+      //this.loginErrorString="Please enter a valid username";
+      this.loginErrorString="You have entered a wrong Username or Password. Please try again with correct credentials";
     }
     else{
       console.log("the response from web api is not matching with our check strings, please check if there is any response strings are changed or any internal server error")

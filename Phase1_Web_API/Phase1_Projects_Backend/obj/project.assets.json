@@ -9042,11 +9042,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CGI Onboard Core Training\\Team4_Project\\Phase1_Projects_Backend\\Phase1_Projects_Backend\\Phase1_Projects_Backend.csproj",
+      "projectUniqueName": "D:\\CGI Onboard Core Training\\Open-Source-Collaboration\\Phase1_Web_API\\Phase1_Projects_Backend\\Phase1_Projects_Backend.csproj",
       "projectName": "Phase1_Projects_Backend",
-      "projectPath": "D:\\CGI Onboard Core Training\\Team4_Project\\Phase1_Projects_Backend\\Phase1_Projects_Backend\\Phase1_Projects_Backend.csproj",
+      "projectPath": "D:\\CGI Onboard Core Training\\Open-Source-Collaboration\\Phase1_Web_API\\Phase1_Projects_Backend\\Phase1_Projects_Backend.csproj",
       "packagesPath": "C:\\Users\\HAI\\.nuget\\packages\\",
-      "outputPath": "D:\\CGI Onboard Core Training\\Team4_Project\\Phase1_Projects_Backend\\Phase1_Projects_Backend\\obj\\",
+      "outputPath": "D:\\CGI Onboard Core Training\\Open-Source-Collaboration\\Phase1_Web_API\\Phase1_Projects_Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HAI\\AppData\\Roaming\\NuGet\\NuGet.Config",
